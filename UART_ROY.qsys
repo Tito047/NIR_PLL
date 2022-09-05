@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=true"
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element UART_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4CE22F17C6" />
+ <parameter name="deviceFamily" value="Cyclone IV E" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="true" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="UART_0.clk" type="clock" dir="end">
+  <port name="clk_clk" internal="clk_clk" />
+ </interface>
+ <interface name="reset" internal="UART_0.reset" type="reset" dir="end">
+  <port name="reset_reset_n" internal="reset_reset_n" />
+ </interface>
+ <interface
+   name="rs232_0_avalon_data_receive_source"
+   internal="UART_0.rs232_0_avalon_data_receive_source"
+   type="avalon_streaming"
+   dir="start">
+  <port
+     name="rs232_0_avalon_data_receive_source_ready"
+     internal="rs232_0_avalon_data_receive_source_ready" />
+  <port
+     name="rs232_0_avalon_data_receive_source_data"
+     internal="rs232_0_avalon_data_receive_source_data" />
+  <port
+     name="rs232_0_avalon_data_receive_source_error"
+     internal="rs232_0_avalon_data_receive_source_error" />
+  <port
+     name="rs232_0_avalon_data_receive_source_valid"
+     internal="rs232_0_avalon_data_receive_source_valid" />
+ </interface>
+ <interface
+   name="rs232_0_avalon_data_transmit_sink"
+   internal="UART_0.rs232_0_avalon_data_transmit_sink"
+   type="avalon_streaming"
+   dir="end">
+  <port
+     name="rs232_0_avalon_data_transmit_sink_data"
+     internal="rs232_0_avalon_data_transmit_sink_data" />
+  <port
+     name="rs232_0_avalon_data_transmit_sink_error"
+     internal="rs232_0_avalon_data_transmit_sink_error" />
+  <port
+     name="rs232_0_avalon_data_transmit_sink_valid"
+     internal="rs232_0_avalon_data_transmit_sink_valid" />
+  <port
+     name="rs232_0_avalon_data_transmit_sink_ready"
+     internal="rs232_0_avalon_data_transmit_sink_ready" />
+ </interface>
+ <interface
+   name="rs232_0_external_interface"
+   internal="UART_0.rs232_0_external_interface"
+   type="conduit"
+   dir="end">
+  <port
+     name="rs232_0_external_interface_RXD"
+     internal="rs232_0_external_interface_RXD" />
+  <port
+     name="rs232_0_external_interface_TXD"
+     internal="rs232_0_external_interface_TXD" />
+ </interface>
+ <module name="UART_0" kind="UART" version="1.0" enabled="1" autoexport="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="EP4CE22F17C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="$${FILENAME}_UART_0" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

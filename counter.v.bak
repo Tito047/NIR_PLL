@@ -1,0 +1,4 @@
+module counter(out,reset,clk);
+input reset,clk;
+output [7:0] out;
+reg    [7:0] out;

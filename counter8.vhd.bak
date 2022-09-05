@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity counter8 is
+	port (
+		clk, rst : std_logic;
+		d_out : std_logic_vector (7 downto 0)
+	);
+end counter8;
